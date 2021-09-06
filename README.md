@@ -17,14 +17,17 @@ Paradigmas:
 # NomeDoProjeto
 
 **Disciplina**: FGA0210 - PARADIGMAS DE PROGRAMAÇÃO - T01 <br>
-**Nro do Grupo**: XX<br>
-**Paradigma**: XXXXXXXXXX<br>
+**Nro do Grupo**: 02<br>
+**Paradigma**: Logico<br>
 
 ## Alunos
 |Matrícula | Aluno |
 | -- | -- |
-| xx/xxxxxx  |  xxxx xxxx xxxxx |
-| xx/xxxxxx  |  xxxx xxxx xxxxx |
+| 15/0120702 | Calebe Rios |
+| 17/0031438 | Damaso Junio Pereira Brasileo |
+| 18/0015966  |  Emily Dias Sousa |
+| 18/0063723 | Fellipe Araujo |
+| 17/0013910  |  João Pedro José Santos da Silva Guedes |
 
 ## Sobre 
 Descreva o seu projeto em linhas gerais. 
