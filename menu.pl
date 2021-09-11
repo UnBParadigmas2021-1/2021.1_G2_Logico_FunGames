@@ -8,5 +8,5 @@ menu :- repeat, nl, nl,
 
 executar(Option) :- 
                     Option == 1, [torreHanoi];
-                    Option == 2, write('Você escolheu macaco & banana'), menu;
+                    Option == 2, [macaco];
                     Option == 0, true.
