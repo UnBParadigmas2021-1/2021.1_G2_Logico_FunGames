@@ -50,3 +50,29 @@ xmove([A,B,C,D,E,F,b,H,I], 7, [A,B,C,D,E,F,x,H,I]).
 xmove([A,B,C,D,E,F,G,b,I], 8, [A,B,C,D,E,F,G,x,I]).
 xmove([A,B,C,D,E,F,G,H,b], 9, [A,B,C,D,E,F,G,H,x]).
 xmove(Board, _, Board) :- write('Jogada inválida, tente novamente!'), nl.
+
+display([A,B,C,D,E,F,G,H,I]) :-
+  write([A,B,C]),
+  nl,
+  write([D,E,F]),
+  nl,
+  write([G,H,I]),
+  nl,
+  nl.
+
+start :- explain, playfrom([b,b,b,b,b,b,b,b,b]).
+
+explain :-
+  write('Você será o jogador X. Para jogar, insira o número da posição seguido por um ponto.'),
+  nl,
+  display([1,2,3,4,5,6,7,8,9]).
+
+playfrom(Board) :- win(Board, x), write(' ====== Você venceu! o/ ====== ').
+playfrom(Board) :- win(Board, o), write(' ====== O oponente venceu! :( ====== ').
+playfrom(Board) :- not(member(b,Board)), not(win(Board, x)), not(win(Board, o)).
+playfrom(Board) :- read(N),
+  xmove(Board, N, Newboard), 
+  display(Newboard),
+  orespond(Newboard, Newnewboard), 
+  display(Newnewboard),
+  playfrom(Newnewboard).
