@@ -1,5 +1,9 @@
+move_one(X, Y) :-
+   format("Mova o disco superior de ~k para ~k", [X, Y]), nl.
+
 move(1,X,Y,_) :-
-   write('Mova o disco superior de '), write(X), write(' para '), write(Y), nl.
+   move_one(X, Y).
+
 move(N,X,Y,Z) :-
    N>1,
    M is N-1,
