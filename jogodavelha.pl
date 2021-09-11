@@ -23,6 +23,23 @@ move([A,B,C,D,E,F,b,H,I], Player, [A,B,C,D,E,F,Player,H,I]).
 move([A,B,C,D,E,F,G,b,I], Player, [A,B,C,D,E,F,G,Player,I]).
 move([A,B,C,D,E,F,G,H,b], Player, [A,B,C,D,E,F,G,H,Player]).
 
+x_can_win_in_one(Board) :- move(Board, x, Newboard), win(Newboard, x).
+
+orespond(Board,Newboard) :- 
+  move(Board, o, Newboard),
+  win(Newboard, o),
+  !.
+orespond(Board,Newboard) :-
+  move(Board, o, Newboard), 
+  not(x_can_win_in_one(Newboard)).
+orespond(Board,Newboard) :-
+  move(Board, o, Newboard).
+orespond(Board,Newboard) :-
+  not(member(b,Board)),
+  !, 
+  write(' ====== Empate! ====== '), nl, nl,
+  Newboard = Board.
+
 xmove([b,B,C,D,E,F,G,H,I], 1, [x,B,C,D,E,F,G,H,I]).
 xmove([A,b,C,D,E,F,G,H,I], 2, [A,x,C,D,E,F,G,H,I]).
 xmove([A,B,b,D,E,F,G,H,I], 3, [A,B,x,D,E,F,G,H,I]).
