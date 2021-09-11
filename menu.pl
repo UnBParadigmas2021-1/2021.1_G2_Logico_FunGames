@@ -10,5 +10,5 @@ menu :- repeat, nl, nl,
 executar(Option) :- 
                     Option == 1, [torreHanoi];
                     Option == 2, [macaco];
-                    Option == 3, [jogoDaVelha];
+                    Option == 3, [jogodavelha];
                     Option == 0, true.
