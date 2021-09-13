@@ -1,6 +1,6 @@
 start :- write('Bem-vindo ao jogo do Macaco e a Banana'), nl,
          write('Para jogar, você precisa digitar o comando para sabe em qual situação o macaco consegue pegar a banana'), nl,
-         write('Vocẽ deve digitar o comando "canget(state(POS_MACACO, POS_VERTICAL, POS_CAIXA, STATUS), X))."'), nl,
+         write('Vocẽ deve digitar o comando "canget(state(POS_MACACO, POS_VERTICAL, POS_CAIXA, STATUS), X)."'), nl,
          write('POS_MACACO deve ser: "atdoor" ou "middle" ou "atwindow"'), nl,
          write('POS_VERTICAL deve ser: "onfloor" ou "onbox"'), nl,
          write('POS_CAIXA deve ser: "atdoor" ou "middle" ou "atwindow"'), nl,
