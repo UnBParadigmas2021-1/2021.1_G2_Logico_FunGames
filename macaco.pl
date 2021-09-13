@@ -5,7 +5,10 @@ start :- write('Bem-vindo ao jogo do Macaco e a Banana'), nl,
          write('POS_VERTICAL deve ser: "onfloor" ou "onbox"'), nl,
          write('POS_CAIXA deve ser: "atdoor" ou "middle" ou "atwindow"'), nl,
          write('STATUS inicialmente deve ser: "hasnot"'), nl,
-         write('Irá ser mostrado como resultado os passos que o macaco deve fazer até chegar na banana.'), nl.
+         write('Irá ser mostrado como resultado os passos que o macaco deve fazer até chegar na banana.'), nl,
+         write('Para finalizar, basta digitar a "quit."'), nl.
+
+quit :- [menu], menu.
 
 
 move(state(middle, onbox, middle, hasnot), grasp, state(middle, onbox, middle, has)).
