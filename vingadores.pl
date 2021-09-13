@@ -1,3 +1,19 @@
+start :- explain.
+
+explain :-
+    write('Olá, eu sou o vigia, já vivi muitas eras e já vi muita coisa, estou aqui para descobrir quem é seu vingador favorito (No universo cinematográfico da marvel). Para isso, irei fazer algumas perguntas e quero que você me responda'), nl,
+    write('Ah, só pra te auxiliar, segue a lista de Vingadores que eu tenho anotado na minha cabeça:'), nl,
+    write('Capitão América'), nl,
+    write('Homem de Ferro'), nl,
+    write('Viúva Negra'), nl,
+    write('Hulk'), nl,
+    write('Thor'), nl,
+    write('Gavião Arqueiro'), nl,
+    write('Mercúrio'), nl,
+    write('Feiticeira Escarlate'), nl,
+    write('Visão'), nl.
+
+
 % Avengers List
 % Name, isMan, isDead, hasSuperPowers, isRich, isHuman and hasBlackHair
 avenger('Capitão América', s, n, s, n, s, n).
