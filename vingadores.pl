@@ -1,4 +1,4 @@
-start :- explain, questions.
+startVingadores :- explain, questions.
 
 explain :-
     write('Olá, eu sou o vigia, já vivi muitas eras e já vi muita coisa, estou aqui para descobrir quem é seu vingador favorito (No universo cinematográfico da marvel). Para isso, irei fazer algumas perguntas e quero que você me responda'), nl,
@@ -33,7 +33,7 @@ questions :-
     read(HasBlackHair),
     write(HasBlackHair), nl,
     findall(X, avenger(X, IsMan, IsDead, HasSuperPowers, IsRich, IsHuman, HasBlackHair), Avengers),
-    write('Segundo meus calculos seu personagem favorito é: '), write(Avengers), nl.
+    write('Segundo meus cálculos seu personagem favorito é: '), (Avengers==[] -> write("Nenhum da lista") ; format("~w~n", Avengers)), nl.
 
 % Avengers List
 % Name, isMan, isDead, hasSuperPowers, isRich, isHuman and hasBlackHair

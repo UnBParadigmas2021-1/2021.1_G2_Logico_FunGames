@@ -10,7 +10,7 @@ menu :- repeat, nl, nl,
 
 executar(Option) :- 
                     Option == 1, [torreHanoi], move(3, origem, alvo, auxiliar), menu;
-                    Option == 2, [macaco], start;
-                    Option == 3, [jogodavelha], start, menu;
-                    Option == 4, [vingadores], start, menu;
+                    Option == 2, [macaco], startMacaco;
+                    Option == 3, [jogodavelha], startVelha, menu;
+                    Option == 4, [vingadores], startVingadores, menu;
                     Option == 0, true.

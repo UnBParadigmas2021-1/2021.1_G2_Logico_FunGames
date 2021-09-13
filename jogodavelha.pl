@@ -13,27 +13,27 @@ colwin(Board, Player) :- Board = [_,_,Player,_,_,Player,_,_,Player].
 diagwin(Board, Player) :- Board = [Player,_,_,_,Player,_,_,_,Player].
 diagwin(Board, Player) :- Board = [_,_,Player,_,Player,_,Player,_,_].
 
-move([b,B,C,D,E,F,G,H,I], Player, [Player,B,C,D,E,F,G,H,I]).
-move([A,b,C,D,E,F,G,H,I], Player, [A,Player,C,D,E,F,G,H,I]).
-move([A,B,b,D,E,F,G,H,I], Player, [A,B,Player,D,E,F,G,H,I]).
-move([A,B,C,b,E,F,G,H,I], Player, [A,B,C,Player,E,F,G,H,I]).
-move([A,B,C,D,b,F,G,H,I], Player, [A,B,C,D,Player,F,G,H,I]).
-move([A,B,C,D,E,b,G,H,I], Player, [A,B,C,D,E,Player,G,H,I]).
-move([A,B,C,D,E,F,b,H,I], Player, [A,B,C,D,E,F,Player,H,I]).
-move([A,B,C,D,E,F,G,b,I], Player, [A,B,C,D,E,F,G,Player,I]).
-move([A,B,C,D,E,F,G,H,b], Player, [A,B,C,D,E,F,G,H,Player]).
+moveGame([b,B,C,D,E,F,G,H,I], Player, [Player,B,C,D,E,F,G,H,I]).
+moveGame([A,b,C,D,E,F,G,H,I], Player, [A,Player,C,D,E,F,G,H,I]).
+moveGame([A,B,b,D,E,F,G,H,I], Player, [A,B,Player,D,E,F,G,H,I]).
+moveGame([A,B,C,b,E,F,G,H,I], Player, [A,B,C,Player,E,F,G,H,I]).
+moveGame([A,B,C,D,b,F,G,H,I], Player, [A,B,C,D,Player,F,G,H,I]).
+moveGame([A,B,C,D,E,b,G,H,I], Player, [A,B,C,D,E,Player,G,H,I]).
+moveGame([A,B,C,D,E,F,b,H,I], Player, [A,B,C,D,E,F,Player,H,I]).
+moveGame([A,B,C,D,E,F,G,b,I], Player, [A,B,C,D,E,F,G,Player,I]).
+moveGame([A,B,C,D,E,F,G,H,b], Player, [A,B,C,D,E,F,G,H,Player]).
 
-x_can_win_in_one(Board) :- move(Board, x, Newboard), win(Newboard, x).
+x_can_win_in_one(Board) :- moveGame(Board, x, Newboard), win(Newboard, x).
 
 orespond(Board,Newboard) :- 
-  move(Board, o, Newboard),
+  moveGame(Board, o, Newboard),
   win(Newboard, o),
   !.
 orespond(Board,Newboard) :-
-  move(Board, o, Newboard), 
+  moveGame(Board, o, Newboard), 
   not(x_can_win_in_one(Newboard)).
 orespond(Board,Newboard) :-
-  move(Board, o, Newboard).
+  moveGame(Board, o, Newboard).
 orespond(Board,Newboard) :-
   not(member(b,Board)),
   !, 
@@ -60,9 +60,9 @@ display([A,B,C,D,E,F,G,H,I]) :-
   nl,
   nl.
 
-start :- explain, playfrom([b,b,b,b,b,b,b,b,b]).
+startVelha :- explainGameVelha, playfrom([b,b,b,b,b,b,b,b,b]).
 
-explain :-
+explainGameVelha :-
   write('Você será o jogador X. Para jogar, insira o número da posição seguido por um ponto.'),
   nl,
   display([1,2,3,4,5,6,7,8,9]).
