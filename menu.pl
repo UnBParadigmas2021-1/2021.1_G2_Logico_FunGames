@@ -9,8 +9,8 @@ menu :- repeat, nl, nl,
         executar(Option).
 
 executar(Option) :- 
-                    Option == 1, [torreHanoi];
-                    Option == 2, [macaco];
-                    Option == 3, [jogodavelha];
-                    Option == 4, [vingadores];
+                    Option == 1, [torreHanoi], move(4, nome1, nome2, nome3), menu;
+                    Option == 2, [macaco], start, menu;
+                    Option == 3, [jogodavelha], start, menu;
+                    Option == 4, [vingadores], start, menu;
                     Option == 0, true.
