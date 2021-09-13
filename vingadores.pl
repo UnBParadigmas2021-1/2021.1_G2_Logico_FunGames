@@ -33,7 +33,7 @@ questions :-
     read(HasBlackHair),
     write(HasBlackHair), nl,
     findall(X, avenger(X, IsMan, IsDead, HasSuperPowers, IsRich, IsHuman, HasBlackHair), Avengers),
-    write('Segundo meus calculos seu personagem favorito é: '), length(Avengers, 1), nl.
+    write('Segundo meus calculos seu personagem favorito é: '), write(Avengers), nl.
 
 % Avengers List
 % Name, isMan, isDead, hasSuperPowers, isRich, isHuman and hasBlackHair
