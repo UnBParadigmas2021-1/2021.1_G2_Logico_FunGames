@@ -55,4 +55,4 @@ A partir disso, cada jogo tem o seu próprio guia e instruções. Aproveite!
 
 ## Vídeo
 
-![Acesse aqui](https://youtu.be/zZXNpC4AiPs)
+[Acesse aqui](https://youtu.be/zZXNpC4AiPs)
