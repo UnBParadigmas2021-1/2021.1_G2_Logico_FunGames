@@ -34,12 +34,6 @@ Insira um manual ou um script para auxiliar ainda mais.
 sudo apt-add-repository ppa:swi-prolog/stable
 sudo apt-get update
 sudo apt-get install swi-prolog
-
-swipl
-
-[menu].
-
-menu.
 ```
 
 ## Uso 
@@ -48,10 +42,19 @@ Explique como usar seu projeto, caso haja algum passo a passo após o comando de
 Para executar cada jogo em expecífico é necessário escolher o jogo de acordo com o número de opções seguindo de ponto final.
 
 ```
+swipl
+
+[menu].
+
+menu.
+
 | <numero_do_jogo> .
 ```
 
-A partir disso, cada jogo tem o seu próprio guia e instruções. Aproveite! 
+A partir disso, cada jogo tem o seu próprio guia e instruções. Aproveite!
+
+#### Explicação da torre de hanoi
+A torre de hanoi pode ser explicada aqui <https://educador.brasilescola.uol.com.br/estrategias-ensino/torre-hanoi.htm> .Este joginho fala mais sobre a solução possivel para as torres e seus discos, Onde N é o número do disco e os outros três são os nomes das torres, onde no código está move(N,X,Y,Z).
 
 ## Vídeo
 
