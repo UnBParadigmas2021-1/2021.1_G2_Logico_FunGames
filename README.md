@@ -59,3 +59,7 @@ A torre de hanoi pode ser explicada aqui <https://educador.brasilescola.uol.com.
 ## Vídeo
 
 [Acesse aqui](https://youtu.be/zZXNpC4AiPs)
+
+## Fontes
+
+* [Jogo da Velha](https://swish.swi-prolog.org/p/Tic-Tac-Toe.swinb) (foi utilizado este código do *S. Tanimoto* como base)
