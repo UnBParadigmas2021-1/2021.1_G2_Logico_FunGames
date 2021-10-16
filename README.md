@@ -63,3 +63,4 @@ A torre de hanoi pode ser explicada aqui <https://educador.brasilescola.uol.com.
 ## Fontes
 
 * [Jogo da Velha](https://swish.swi-prolog.org/p/Tic-Tac-Toe.swinb) (foi utilizado este código do *S. Tanimoto* como base)
+* [Akinator](https://github.com/AcTiv3MineD/akinator_prolog/blob/master/main.pl) (Para criação do Akinator foi utilizado este código como base porém numa versão mais simplificada).
